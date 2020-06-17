@@ -1,0 +1,23 @@
+name: Deploying to DEV server
+on: [push, pull_request]
+
+# all jobs run in parallel by default
+jobs:
+  doctor:
+    name: saving lives, touching hearts
+      runs-on: ubuntu-latest # defines the virtual env for execution
+      steps:
+        - name: checking blood pressure
+          env:
+            BLOOD_PRESSURE: 69
+          run: |
+            echo "Patient's blood pressure is " $BLOOD_PRESSURE
+  lawyer:
+    name: fighting SJWs
+    runs-on: ubuntu-latest
+    steps:
+      - name: victimize his client
+        env:
+          STATE: INJURED
+        run: |
+          echo "MY CLIENT IS " $INJURED
