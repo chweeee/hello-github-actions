@@ -1,0 +1,39 @@
+name: Deploying to DEV server
+#on: [push, pull_request]
+on: push
+
+# since all jobs run in parallel and steps run sequentially
+# 1 job, many steps
+# 1) SSH into remote server
+# 2) Update codebase via git pull
+# 3) Build docker images
+# 4) Start the kubernetes cluster using helm
+
+jobs:
+  deploy_to_DO:
+    name: Deploying to DO
+    runs-on: ubuntu-latest
+    steps:
+        - name: SSH into DEV server
+          env:
+            VARIABLE: TEMP
+          run: |
+            echo "SSH-ing into server"
+
+        - name: Updaing codebase
+          env:
+            VARIABLE: TEMP
+          run: |
+            echo "Update codebase using git-pull"
+
+        - name: Building Docker images
+          env:
+            VARIABLE: TEMP
+          run: |
+            echo "Building docker images for service"
+
+        - name: Starting kubernetes cluster
+          env:
+            VARIABLE: TEMP
+          run: |
+            echo "Staring K8s cluster using some Helm command"
