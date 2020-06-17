@@ -2,14 +2,13 @@ name: Deploying to DEV server
 #on: [push, pull_request]
 on: push
 
-# since jobs run in parallel and steps run sequentially
+# since all jobs run in parallel and steps run sequentially
 # 1 job, many steps
 # 1) SSH into remote server
 # 2) Update codebase via git pull
 # 3) Build docker images
 # 4) Start the kubernetes cluster using helm
 
-# all jobs run in parallel by default
 jobs:
   deploy_to_DO:
     name: Deploying to DO
