@@ -5,13 +5,13 @@ on: [push, pull_request]
 jobs:
   doctor:
     name: saving lives, touching hearts
-      runs-on: ubuntu-latest
-      steps:
-        - name: checking blood pressure
-          env:
-            BLOOD_PRESSURE: 69
-          run: |
-            echo "Patient's blood pressure is " $BLOOD_PRESSURE
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking blood pressure
+        env:
+          BLOOD_PRESSURE: 69
+        run: |
+          echo "Patient's blood pressure is " $BLOOD_PRESSURE
   lawyer:
     name: fighting SJWs
     runs-on: ubuntu-latest
