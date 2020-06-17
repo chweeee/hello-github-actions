@@ -1,0 +1,5 @@
+# this is where we declare our workflow
+
+# workflow will be executed when the `push` event is triggered
+name: A workflow for my Hello World file
+on: push
