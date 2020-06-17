@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   doctor:
     name: saving lives, touching hearts
-      runs-on: ubuntu-latest # defines the virtual env for execution
+      runs-on: ubuntu-latest
       steps:
         - name: checking blood pressure
           env:
