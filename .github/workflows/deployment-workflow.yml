@@ -16,20 +16,24 @@ jobs:
     steps:
         - name: SSH into DEV server
           env:
+            VARIABLE: TEMP
           run: |
             echo "SSH-ing into server"
 
         - name: Updaing codebase
           env:
+            VARIABLE: TEMP
           run: |
             echo "Update codebase using git-pull"
 
         - name: Building Docker images
           env:
+            VARIABLE: TEMP
           run: |
             echo "Building docker images for service"
 
         - name: Starting kubernetes cluster
           env:
+            VARIABLE: TEMP
           run: |
             echo "Staring K8s cluster using some Helm command"
