@@ -1,5 +1,6 @@
 name: Deploying to DEV server
-on: [push, pull_request]
+#on: [push, pull_request]
+on: push
 
 # since jobs run in parallel and steps run sequentially
 # 1 job, many steps
